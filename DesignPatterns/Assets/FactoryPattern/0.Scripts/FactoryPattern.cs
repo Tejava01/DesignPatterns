@@ -14,7 +14,7 @@ public class FactoryPattern : MonoBehaviour
     [Header("Abstract")]
     [SerializeField] BossSpawnerBase[] bossSpawnerAry;
 
-    void Start()
+    private void Start()
     {
         //SimpleFactory 단일클래스에서 객체를 생성하는 패턴
         MonsterBase slime1 = monsterSpawner.SpawnMonster(EMonsterType.Slime);

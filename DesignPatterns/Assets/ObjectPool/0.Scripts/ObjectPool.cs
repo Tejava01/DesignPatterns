@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
+    [Header ("ObjectPool")]
     [SerializeField] private int poolSize = 5;
     [SerializeField] private PoolObject poolObj;
 

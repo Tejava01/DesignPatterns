@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CommandMove : ICommand
 {
-    private Player m_player;
+    private PlayerC m_player;
     private Vector3 m_direction;
 
-    public CommandMove(Player player, Vector3 direction)
+    public CommandMove(PlayerC player, Vector3 direction)
     {
         m_player = player;
         m_direction = direction;

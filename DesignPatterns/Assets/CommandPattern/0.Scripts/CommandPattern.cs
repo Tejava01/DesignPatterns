@@ -8,7 +8,7 @@ public class CommandPattern : MonoBehaviour
     [Header ("CommandInvoker")]
     [SerializeField] private CommandInvoker commandInvoker;
     [Header ("Player")]
-    [SerializeField] private Player player;
+    [SerializeField] private PlayerC player;
     [Header("Button")]
     [SerializeField] private Button forwardBtn;
     [SerializeField] private Button backBtn;
@@ -28,7 +28,7 @@ public class CommandPattern : MonoBehaviour
         redoBtn.onClick.AddListener(() => commandInvoker.RedoCommand());
     }
 
-    private void RunPlayerCommand(Player player, Vector3 direction)
+    private void RunPlayerCommand(PlayerC player, Vector3 direction)
     {
         ICommand command = new CommandMove(player, direction);
         commandInvoker.ExecuteCommand(command);

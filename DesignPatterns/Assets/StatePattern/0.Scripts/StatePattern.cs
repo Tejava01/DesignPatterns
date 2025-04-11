@@ -35,22 +35,18 @@ public class StatePattern : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             m_inputEntity.CurrentDirectionInput = Vector3.forward;
-            //player.SetPlayerStateMove(Vector3.forward);
         }
         else if (Input.GetKey(KeyCode.S))
         {
             m_inputEntity.CurrentDirectionInput = Vector3.back;
-            //player.SetPlayerStateMove(Vector3.back);
         }
         else if (Input.GetKey(KeyCode.A))
         {
             m_inputEntity.CurrentDirectionInput = Vector3.left;
-            //player.SetPlayerStateMove(Vector3.left);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             m_inputEntity.CurrentDirectionInput = Vector3.right;
-            //player.SetPlayerStateMove(Vector3.right);
         }
         else
         {
@@ -60,7 +56,6 @@ public class StatePattern : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             m_inputEntity.CurrentJumpInput = true;
-            //player.SetPlayerState(player.stateMachine.stateJump);
         }
     }
 }

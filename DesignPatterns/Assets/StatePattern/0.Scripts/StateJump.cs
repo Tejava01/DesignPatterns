@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Timeline;
 
 public class StateJump : IState
 {
@@ -18,7 +17,7 @@ public class StateJump : IState
     public void Enter()
     {
         player.Statetxt.text = "State : Jump";
-        player.Rigidbody.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
+        player.Rigidbody.AddForce(new Vector3(player.CurrentDirectionInput.x, 5, player.CurrentDirectionInput.z), ForceMode.Impulse);
     }
 
     public void Update()

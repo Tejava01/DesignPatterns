@@ -1,20 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
-public interface IInputEntity
-{
-    public bool IsInputLock {  get; set; }
-    public Vector3 CurrentDirectionInput { get; set; }
-    public bool CurrentJumpInput { get; set; }
-}
 
 //PlayerINput 받는 부분
 public class StatePattern : MonoBehaviour
 {
-    [Header("InputEntity")]
-    [SerializeField] private IInputEntity m_inputEntity;
+    private IInputEntity m_inputEntity;
 
     //---------------------------------------------
     private void Awake()
@@ -23,7 +14,7 @@ public class StatePattern : MonoBehaviour
 
         if(m_inputEntity == null)
         {
-            //ERROR!
+            Debug.Log("ERROR - 이 GameObject에 IInputEntity 구현체가 없습니다");
         }
     }
 

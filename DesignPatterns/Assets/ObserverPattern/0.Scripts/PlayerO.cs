@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class PlayerO : MonoBehaviour
 {
+    [SerializeField] private ObserverPattern observer;
+
     private void Awake()
     {
-        ObserverPattern.OnCliked += Teleport;
+        observer.OnCliked += Teleport;
     }
 
     private void OnDestroy()
     {
-        ObserverPattern.OnCliked -= Teleport;
+        observer.OnCliked -= Teleport;
     }
 
     private void Teleport()

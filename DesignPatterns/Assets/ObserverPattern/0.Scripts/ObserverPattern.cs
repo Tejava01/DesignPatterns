@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ObserverPattern : MonoBehaviour
 {
     [SerializeField] private Button TeleportBtn;
-    public static event Action OnCliked;
+    public event Action OnCliked;
 
     private void Start()
     {
